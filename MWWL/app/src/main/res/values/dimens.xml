@@ -1,0 +1,83 @@
+<resources>
+    <!--设置字体-->
+    <dimen name="fontSetting_2sp">2sp</dimen>
+    <dimen name="fontSetting_4sp">4sp</dimen>
+    <dimen name="fontSetting_6sp">6sp</dimen>
+    <dimen name="fontSetting_8sp">8sp</dimen>
+    <dimen name="fontSetting_10sp">10sp</dimen>
+    <dimen name="fontSetting_12sp">12sp</dimen>
+    <dimen name="fontSetting_14sp">14sp</dimen>
+    <dimen name="fontSetting_16sp">16sp</dimen>
+    <dimen name="fontSetting_18sp">18sp</dimen>
+    <dimen name="fontSetting_20sp">20sp</dimen>
+    <dimen name="fontSetting_22sp">22sp</dimen>
+    <dimen name="fontSetting_24sp">24sp</dimen>
+    <dimen name="fontSetting_26sp">26sp</dimen>
+    <dimen name="fontSetting_28sp">28sp</dimen>
+    <!--设置字体-->
+
+    <!--设置控件宽高-->
+    <dimen name="controlSetting_004dp">0.4dp</dimen>
+    <dimen name="controlSetting_008dp">0.8dp</dimen>
+
+    <dimen name="controlSetting_2dp">2dp</dimen>
+    <dimen name="controlSetting_4dp">4dp</dimen>
+    <dimen name="controlSetting_6dp">6dp</dimen>
+    <dimen name="controlSetting_8dp">8dp</dimen>
+    <dimen name="controlSetting_10dp">10dp</dimen>
+    <dimen name="controlSetting_12dp">12dp</dimen>
+    <dimen name="controlSetting_14dp">14dp</dimen>
+    <dimen name="controlSetting_16dp">16dp</dimen>
+    <dimen name="controlSetting_18dp">18dp</dimen>
+    <dimen name="controlSetting_20dp">20dp</dimen>
+    <dimen name="controlSetting_22dp">22dp</dimen>
+    <dimen name="controlSetting_24dp">24dp</dimen>
+    <dimen name="controlSetting_26dp">26dp</dimen>
+    <dimen name="controlSetting_28dp">28dp</dimen>
+    <dimen name="controlSetting_30dp">30dp</dimen>
+    <dimen name="controlSetting_32dp">32dp</dimen>
+    <dimen name="controlSetting_34dp">34dp</dimen>
+    <dimen name="controlSetting_36dp">36dp</dimen>
+    <dimen name="controlSetting_38dp">38dp</dimen>
+    <dimen name="controlSetting_40dp">40dp</dimen>
+    <dimen name="controlSetting_42dp">42dp</dimen>
+    <dimen name="controlSetting_44dp">44dp</dimen>
+    <dimen name="controlSetting_46dp">46dp</dimen>
+    <dimen name="controlSetting_48dp">48dp</dimen>
+    <dimen name="controlSetting_50dp">50dp</dimen>
+    <dimen name="controlSetting_52dp">52dp</dimen>
+    <dimen name="controlSetting_54dp">54dp</dimen>
+    <dimen name="controlSetting_56dp">56dp</dimen>
+    <dimen name="controlSetting_58dp">58dp</dimen>
+    <dimen name="controlSetting_60dp">60dp</dimen>
+    <dimen name="controlSetting_62dp">62dp</dimen>
+    <dimen name="controlSetting_64dp">64dp</dimen>
+    <dimen name="controlSetting_66dp">66dp</dimen>
+    <dimen name="controlSetting_68dp">68dp</dimen>
+    <dimen name="controlSetting_70dp">70dp</dimen>
+    <dimen name="controlSetting_72dp">72dp</dimen>
+    <dimen name="controlSetting_74dp">74dp</dimen>
+    <dimen name="controlSetting_76dp">76dp</dimen>
+    <dimen name="controlSetting_78dp">78dp</dimen>
+    <dimen name="controlSetting_80dp">80dp</dimen>
+    <dimen name="controlSetting_82dp">82dp</dimen>
+    <dimen name="controlSetting_84dp">84dp</dimen>
+    <dimen name="controlSetting_86dp">86dp</dimen>
+    <dimen name="controlSetting_88dp">88dp</dimen>
+    <dimen name="controlSetting_90dp">90dp</dimen>
+    <dimen name="controlSetting_92dp">92dp</dimen>
+    <dimen name="controlSetting_94dp">94dp</dimen>
+    <dimen name="controlSetting_96dp">96dp</dimen>
+    <dimen name="controlSetting_98dp">98dp</dimen>
+    <dimen name="controlSetting_100dp">100dp</dimen>
+    <dimen name="controlSetting_120dp">120dp</dimen>
+    <dimen name="controlSetting_140dp">140dp</dimen>
+    <dimen name="controlSetting_160dp">160dp</dimen>
+    <dimen name="controlSetting_180dp">180dp</dimen>
+    <dimen name="controlSetting_200dp">200dp</dimen>
+    <dimen name="controlSetting_240dp">240dp</dimen>
+    <dimen name="controlSetting_260dp">260dp</dimen>
+    <dimen name="controlSetting_300dp">300dp</dimen>
+
+    <!--设置控件宽高-->
+</resources>
