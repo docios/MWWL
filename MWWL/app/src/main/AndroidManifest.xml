@@ -28,7 +28,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".mvp.ui.activity.RecordSearchResultActivity"></activity>
+        <activity android:name=".mvp.ui.activity.InventoryUpLoadActivity"></activity>
+        <activity android:name=".mvp.ui.activity.RecordSearchResultActivity" />
         <activity android:name=".mvp.ui.activity.LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
