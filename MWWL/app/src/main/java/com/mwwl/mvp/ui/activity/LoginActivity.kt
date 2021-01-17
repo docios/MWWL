@@ -36,6 +36,8 @@ class LoginActivity : BaseActivity<LoginActivityPresenter>(), LoginActivityContr
     }
 
 
+    override fun initToolBar() {
+    }
     override fun initData(savedInstanceState: Bundle?) {
 
     }
@@ -49,4 +51,5 @@ class LoginActivity : BaseActivity<LoginActivityPresenter>(), LoginActivityContr
         }
 
     }
+
 }

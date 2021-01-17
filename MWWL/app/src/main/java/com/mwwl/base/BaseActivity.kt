@@ -79,11 +79,11 @@ abstract class BaseActivity<P : IPresenter> : SupportActivity(), IActivity, Acti
             //绑定到butterknife
             mUnbinder = ButterKnife.bind(this)
         }
-
+        initToolBar()
         initData(savedInstanceState)
     }
 
-
+    abstract fun initToolBar()
 
     override fun onDestroy() {
         super.onDestroy()

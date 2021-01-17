@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activityDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_gravity="center"
+    android:background="@drawable/bg_activity_dialog"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/controlSetting_30dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/controlSetting_10dp"
+            android:gravity="center"
+            android:text="提示"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/fontSetting_14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/controlSetting_30dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/controlSetting_10dp"
+            android:gravity="center"
+            android:text="确定要退出当前用户吗?"
+            android:textColor="@color/grey51"
+            android:textSize="@dimen/fontSetting_14sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/controlSetting_40dp"
+            android:layout_marginTop="@dimen/controlSetting_10dp"
+            android:layout_marginBottom="@dimen/controlSetting_20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancleTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/controlSetting_20dp"
+                android:layout_marginRight="@dimen/controlSetting_10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_profile_exit_login"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/grey51"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+            <TextView
+                android:id="@+id/submitTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/controlSetting_10dp"
+                android:layout_marginRight="@dimen/controlSetting_20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_profile_exit_login"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/SteelBlue2"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

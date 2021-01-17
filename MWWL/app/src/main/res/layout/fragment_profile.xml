@@ -3,12 +3,202 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
     android:orientation="vertical">
-    <include layout="@layout/include_toolbar"/>
-    <TextView
+
+    <include layout="@layout/include_toolbar" />
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="我的" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/controlSetting_30dp"
+        android:background="@color/White"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_08view" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/controlSetting_48dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="@dimen/controlSetting_100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="@dimen/controlSetting_20dp"
+                android:gravity="center|left"
+                android:text="用户名"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="@dimen/controlSetting_20dp"
+                android:gravity="center|right"
+                android:text="张三"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+
+        </LinearLayout>
+
+        <include layout="@layout/include_08view" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/controlSetting_48dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="@dimen/controlSetting_100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="@dimen/controlSetting_20dp"
+                android:gravity="center|left"
+                android:text="用户名"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="@dimen/controlSetting_20dp"
+                android:gravity="center|right"
+                android:text="张三"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+
+        </LinearLayout>
+
+
+        <include layout="@layout/include_08view" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/controlSetting_48dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="@dimen/controlSetting_100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="@dimen/controlSetting_20dp"
+                android:gravity="center|left"
+                android:text="用户名"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="@dimen/controlSetting_20dp"
+                android:gravity="center|right"
+                android:text="张三"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+
+        </LinearLayout>
+
+        <include layout="@layout/include_08view" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/controlSetting_48dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="@dimen/controlSetting_100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="@dimen/controlSetting_20dp"
+                android:gravity="center|left"
+                android:text="用户名"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="@dimen/controlSetting_20dp"
+                android:gravity="center|right"
+                android:text="张三"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+
+        </LinearLayout>
+
+        <include layout="@layout/include_08view" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/controlSetting_48dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="@dimen/controlSetting_100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="@dimen/controlSetting_20dp"
+                android:gravity="center|left"
+                android:text="用户名"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+            <TextView
+                android:id="@+id/versionTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="@dimen/controlSetting_20dp"
+                android:gravity="center|right"
+                android:text="张三"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/fontSetting_14sp" />
+
+
+        </LinearLayout>
+
+        <include layout="@layout/include_08view" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exitLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/controlSetting_48dp"
+        android:layout_marginTop="@dimen/controlSetting_10dp"
+        android:background="@color/White"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="@color/Brown1"
+            android:textSize="@dimen/fontSetting_16sp" />
+
+    </LinearLayout>
 </LinearLayout>

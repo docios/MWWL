@@ -3,15 +3,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
     android:orientation="vertical">
 
     <include layout="@layout/include_toolbar"/>
 
-    <TextView
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/controlSetting_20dp">
+
+    <include layout="@layout/include_08view"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/controlSetting_48dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/controlSetting_100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|left"
+            android:gravity="center|left"
+            android:textSize="@dimen/fontSetting_14sp"
+            android:layout_marginLeft="@dimen/controlSetting_20dp"
+            android:textColor="@color/Black"
+            android:text="RFID"/>
+
+
+        <EditText
+            android:id="@+id/rfidNumber"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center|right"
+            android:gravity="right|center"
+            android:textColorHint="@color/color_default"
+            android:textColor="@color/Black"
+            android:background="@null"
+            android:textSize="@dimen/fontSetting_14sp"
+            android:layout_marginRight="@dimen/controlSetting_10dp"
+            android:hint="请输入/扫描RFID号"/>
+
+        <ImageView
+            android:id="@+id/scanIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/controlSetting_20dp"
+            android:gravity="center"
+            android:src="@drawable/ic_scan" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/include_08view"/>
+
+
+    <TextView
+        android:id="@+id/queryTv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/controlSetting_48dp"
+        android:textColor="@color/White"
+        android:layout_margin="@dimen/controlSetting_20dp"
+        android:background="@drawable/bg_record_scan"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="记录" />
+        android:textSize="@dimen/fontSetting_16sp"
+        android:text="查  询"/>
+
+
+
+</LinearLayout>
+
 
 </LinearLayout>

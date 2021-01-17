@@ -23,6 +23,8 @@ class MainActivity : BaseActivity<IPresenter>() {
     override fun initView(savedInstanceState: Bundle?): Int {
         return R.layout.activity_main
     }
+    override fun initToolBar() {
+    }
 
     override fun initData(savedInstanceState: Bundle?) {
         if (findFragment(MainFragment::class.java) == null) {
@@ -56,5 +58,7 @@ class MainActivity : BaseActivity<IPresenter>() {
             super.onBackPressedSupport()
         }
     }
+
+
 
 }
