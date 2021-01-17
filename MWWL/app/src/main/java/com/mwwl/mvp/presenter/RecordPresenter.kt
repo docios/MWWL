@@ -9,7 +9,7 @@ import com.jess.arms.http.imageloader.ImageLoader
 import me.jessyan.rxerrorhandler.core.RxErrorHandler
 import javax.inject.Inject
 
-import com.mwwl.mvp.contract.QueryContract
+import com.mwwl.mvp.contract.RecordContract
 
 
 /**
@@ -25,10 +25,10 @@ import com.mwwl.mvp.contract.QueryContract
  * ================================================
  */
 @FragmentScope
-class QueryPresenter
+class RecordPresenter
 @Inject
-constructor(model: QueryContract.Model, rootView: QueryContract.View) :
-    BasePresenter<QueryContract.Model, QueryContract.View>(model, rootView) {
+constructor(model: RecordContract.Model, rootView: RecordContract.View) :
+    BasePresenter<RecordContract.Model, RecordContract.View>(model, rootView) {
     @Inject
     lateinit var mErrorHandler: RxErrorHandler
     @Inject

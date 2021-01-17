@@ -124,19 +124,6 @@ abstract class BaseActivity<P : IPresenter> : SupportActivity(), IActivity, Acti
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     protected fun initStatusBar() {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(SettingUtil.getColor(this)))
         StatusBarUtil.setColor(this, SettingUtil.getColor(this), 0)

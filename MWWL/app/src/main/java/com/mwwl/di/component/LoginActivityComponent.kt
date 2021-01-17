@@ -6,7 +6,7 @@ import com.jess.arms.di.component.AppComponent
 import com.mwwl.di.module.LoginActivityModule
 
 import com.jess.arms.di.scope.ActivityScope
-import com.mwwl.mvp.ui.activity.LoginActivityActivity
+import com.mwwl.mvp.ui.activity.LoginActivity
 
 
 /**
@@ -27,5 +27,5 @@ import com.mwwl.mvp.ui.activity.LoginActivityActivity
     dependencies = arrayOf(AppComponent::class)
 )
 interface LoginActivityComponent {
-    fun inject(activity: LoginActivityActivity)
+    fun inject(activity: LoginActivity)
 }

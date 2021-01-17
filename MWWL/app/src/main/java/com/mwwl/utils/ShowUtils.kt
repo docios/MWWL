@@ -4,12 +4,15 @@ import android.app.ProgressDialog
 import android.content.Context
 import android.graphics.drawable.ClipDrawable
 import android.graphics.drawable.ColorDrawable
+import android.text.TextUtils
 import android.view.Gravity
 import android.view.Window
+import android.widget.Toast
 
 
 object ShowUtils {
     private var dialog: ProgressDialog? = null
+    private var toast: Toast? = null
     fun showLoading(context: Context) {
         dialog?.run {
             if (isShowing) return
@@ -35,6 +38,17 @@ object ShowUtils {
         dialog = null
     }
 
+    /**
+     * 在屏幕底部吐司 默认
+     */
+    fun showToast(context: Context, arg: String) {
+        if (!TextUtils.isEmpty(arg)) {
+            toast?.cancel()
+            toast = Toast.makeText(context.applicationContext, arg, Toast.LENGTH_SHORT).apply {
+                show()
+            }
+        }
 
+    }
 
 }

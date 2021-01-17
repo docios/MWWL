@@ -3,10 +3,10 @@ package com.mwwl.di.component
 import dagger.Component
 import com.jess.arms.di.component.AppComponent
 
-import com.mwwl.di.module.QueryModule
+import com.mwwl.di.module.RecordModule
 
 import com.jess.arms.di.scope.FragmentScope
-import com.mwwl.mvp.ui.fragment.QueryFragment
+import com.mwwl.mvp.ui.fragment.RecordFragment
 
 
 /**
@@ -22,7 +22,7 @@ import com.mwwl.mvp.ui.fragment.QueryFragment
  * ================================================
  */
 @FragmentScope
-@Component(modules = arrayOf(QueryModule::class), dependencies = arrayOf(AppComponent::class))
-interface QueryComponent {
-    fun inject(fragment: QueryFragment)
+@Component(modules = arrayOf(RecordModule::class), dependencies = arrayOf(AppComponent::class))
+interface RecordComponent {
+    fun inject(fragment: RecordFragment)
 }

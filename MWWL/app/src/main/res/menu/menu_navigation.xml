@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_invertory"
+        android:checked="true"
+        android:icon="@drawable/ic_invertory"
+        android:title="@string/bottomname1" />
+
+    <item
+        android:id="@+id/menu_record"
+        android:icon="@drawable/ic_record"
+        android:title="@string/bottomname2" />
+
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/bottomname3" />
+
+
+
+</menu>

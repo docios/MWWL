@@ -5,7 +5,7 @@ import com.jess.arms.di.scope.FragmentScope
 import dagger.Module
 import dagger.Provides
 
-import com.mwwl.mvp.contract.QueryContract
+import com.mwwl.mvp.contract.RecordContract
 import com.mwwl.mvp.model.QueryModel
 
 
@@ -23,16 +23,16 @@ import com.mwwl.mvp.model.QueryModel
  */
 @Module
 //构建QueryModule时,将View的实现类传进来,这样就可以提供View的实现类给presenter
-class QueryModule(private val view: QueryContract.View) {
+class RecordModule(private val view: RecordContract.View) {
     @FragmentScope
     @Provides
-    fun provideQueryView(): QueryContract.View {
+    fun provideQueryView(): RecordContract.View {
         return this.view
     }
 
     @FragmentScope
     @Provides
-    fun provideQueryModel(model: QueryModel): QueryContract.Model {
+    fun provideQueryModel(model: QueryModel): RecordContract.Model {
         return model
     }
 }

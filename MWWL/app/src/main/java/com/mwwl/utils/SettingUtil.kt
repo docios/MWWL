@@ -72,7 +72,7 @@ object SettingUtil {
     }
 
     fun getColorStateList(context: Context): ColorStateList {
-        val colors = intArrayOf(getColor(context), ArmsUtils.getColor(context, R.color.color_3))
+        val colors = intArrayOf(getColor(context), ArmsUtils.getColor(context, R.color.Black))
         val states = arrayOfNulls<IntArray>(2)
         states[0] = intArrayOf(android.R.attr.state_checked, android.R.attr.state_checked)
         states[1] = intArrayOf()

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
+import com.hjq.toast.ToastUtils
 import com.jess.arms.base.BaseFragment
 import com.jess.arms.base.delegate.IFragment
 import com.jess.arms.integration.cache.Cache
@@ -40,11 +41,13 @@ import javax.inject.Inject
  * [Follow me](https://github.com/JessYanCoding)
  * ================================================
  */
-abstract class BaseFragment<P : IPresenter> : SupportFragment(), IFragment, FragmentLifecycleable, IView {
+abstract class BaseFragment<P : IPresenter> : SupportFragment(), IFragment, FragmentLifecycleable,
+    IView {
     protected val TAG = this.javaClass.simpleName
     private val mLifecycleSubject = BehaviorSubject.create<FragmentEvent>()
     private var mCache: Cache<*, *>? = null
     protected var mContext: Context? = null
+
     @Inject
     @JvmField
     var mPresenter: P? = null//如果当前页面逻辑简单, Presenter 可以为 null
@@ -52,7 +55,8 @@ abstract class BaseFragment<P : IPresenter> : SupportFragment(), IFragment, Frag
     @Synchronized
     override fun provideCache(): Cache<String, Any> {
         if (mCache == null) {
-            mCache = ArmsUtils.obtainAppComponentFromContext(activity).cacheFactory().build(CacheType.ACTIVITY_CACHE)
+            mCache = ArmsUtils.obtainAppComponentFromContext(activity).cacheFactory()
+                .build(CacheType.ACTIVITY_CACHE)
         }
         return mCache as Cache<String, Any>
     }
@@ -66,7 +70,11 @@ abstract class BaseFragment<P : IPresenter> : SupportFragment(), IFragment, Frag
         mContext = context
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return initView(inflater, container, savedInstanceState)
     }
 
@@ -98,9 +106,15 @@ abstract class BaseFragment<P : IPresenter> : SupportFragment(), IFragment, Frag
         //这是MvpArms的初始化数据方法，fragment只要创建就会执行，没有懒加载效果，我已经用了其他的库替代了，所以这个方法继承后我们可以 实现或不实现都阔以
     }
 
+
+
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        initToolBar()
     }
+
+    abstract fun initToolBar()
 
     override fun showLoading() {
         ShowUtils.showLoading(_mActivity)
@@ -109,8 +123,12 @@ abstract class BaseFragment<P : IPresenter> : SupportFragment(), IFragment, Frag
     override fun hideLoading() {
         ShowUtils.dismissLoading()
     }
+
+    fun showToast(message: String) {
+        ToastUtils.show(message)
+    }
+
     override fun showMessage(message: String) {
-        ShowUtils.showDialog(_mActivity,message)
     }
 
     override fun launchActivity(intent: Intent) {

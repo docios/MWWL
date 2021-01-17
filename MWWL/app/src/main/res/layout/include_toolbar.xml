@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ndroid="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:popupTheme="@style/AppTheme.PopupOverlay"
+    app:title=""
+    app:titleTextAppearance="@style/Toolbar.TitleText">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontSetting_18sp"
+            android:textColor="@color/White"
+            ndroid:layout_gravity="center"
+            android:text=""
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/toolbarbottom"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontSetting_12sp"
+            android:textColor="@color/White"
+            ndroid:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

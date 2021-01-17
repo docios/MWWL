@@ -1,4 +1,4 @@
-package com.mwwl.weight
+package com.mwwl.utils
 
 import android.annotation.TargetApi
 import android.content.Context

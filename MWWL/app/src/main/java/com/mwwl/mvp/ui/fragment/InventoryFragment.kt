@@ -2,14 +2,13 @@ package com.mwwl.mvp.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import butterknife.OnClick
 
-import com.jess.arms.base.BaseFragment
 import com.jess.arms.di.component.AppComponent
-import com.jess.arms.utils.ArmsUtils
 
 import com.mwwl.di.component.DaggerInventoryComponent
 import com.mwwl.di.module.InventoryModule
@@ -17,34 +16,16 @@ import com.mwwl.mvp.contract.InventoryContract
 import com.mwwl.mvp.presenter.InventoryPresenter
 
 import com.mwwl.R
+import com.mwwl.base.BaseFragment
+import com.mwwl.utils.LogUtil
+import kotlinx.android.synthetic.main.fragment_inventory.*
 
 
 /**
- * ================================================
- * Description:
- * <p>
- * Created by MVPArmsTemplate on 01/15/2021 14:51
- * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
- * <a href="https://github.com/JessYanCoding">Follow me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms">Star me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms/wiki">See me</a>
- * <a href="https://github.com/JessYanCoding/MVPArmsTemplate">模版请保持更新</a>
- * ================================================
- */
-/**
- * 如果没presenter
- * 你可以这样写
- *
- * @FragmentScope(請注意命名空間) class NullObjectPresenterByFragment
- * @Inject constructor() : IPresenter {
- * override fun onStart() {
- * }
- *
- * override fun onDestroy() {
- * }
- * }
+ * 盘点
  */
 class InventoryFragment : BaseFragment<InventoryPresenter>(), InventoryContract.View {
+
     companion object {
         fun newInstance(): InventoryFragment {
             val fragment = InventoryFragment()
@@ -62,75 +43,98 @@ class InventoryFragment : BaseFragment<InventoryPresenter>(), InventoryContract.
             .inject(this)
     }
 
+    override fun initToolBar() {}
+
     override fun initView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         return inflater.inflate(R.layout.fragment_inventory, container, false);
     }
 
     override fun initData(savedInstanceState: Bundle?) {
+//        val sb = StringBuilder()
+//        sb.append("<html>")
+//        sb.append("<head>")
+//        sb.append("<style>.main-table tr td { padding: 4px 0 } .main-table tr:first-child td { border: 1px solid #EEE; border-right: none; } .main-table tr:first-child td:last-child { border: 1px solid #EEE; } .main-table tr td { border-left: 1px solid #EEE; border-bottom: 1px solid #EEE; } .main-table tr td:last-child { border: 1px solid #EEE; border-top: none; } .title { font-size: 24px; font-weight: bold; } </style>")
+//        sb.append("</head")
+//        sb.append("<body>")
+//
+//        spoTableHeaderItemList?.let {
+//            // 标题
+//            for (index in it.indices) {
+//                val ruleDetailBean = it.get(index)
+//                val isTitle = ruleDetailBean.istitle
+//                if (isTitle == 1) {
+//                    val itemContent = ruleDetailBean.itemcontent
+//                    sb.append("<div class=\"title\" align=\"center\" width=\"100%\">$itemContent</div>")
+//                } else {
+//                    val detailName = ruleDetailBean.detailname
+//                    val itemContent = ruleDetailBean.itemcontent
+//                    sb.append("<div>$detailName:$itemContent</div>")
+//                }
+//            }
+//        }
+//
+//        list?.let {
+//            sb.append("<table class=\"main-table\" cellspacing=\"0\" width=\"100%\">")
+//            for (index in it.indices) {
+//                val item = it.get(index)
+//                item?.let {
+//                    sb.append("<tr>")
+//                    for (childIndex in it.indices) {
+//                        val childItem = it.get(childIndex)
+//                        sb.append("<td colspan=\"1\" align=\"center\">${childItem}</td>")
+//                    }
+//                    sb.append("</tr>")
+//                }
+//            }
+//            sb.append("</table>")
+//        }
+//        sb.append("</body>")
+//        sb.append("</html>")
+//        webView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null)
 
     }
 
-    /**
-     * 通过此方法可以使 Fragment 能够与外界做一些交互和通信, 比如说外部的 Activity 想让自己持有的某个 Fragment 对象执行一些方法,
-     * 建议在有多个需要与外界交互的方法时, 统一传 {@link Message}, 通过 what 字段来区分不同的方法, 在 {@link #setData(Object)}
-     * 方法中就可以 {@code switch} 做不同的操作, 这样就可以用统一的入口方法做多个不同的操作, 可以起到分发的作用
-     * <p>
-     * 调用此方法时请注意调用时 Fragment 的生命周期, 如果调用 {@link #setData(Object)} 方法时 {@link Fragment#onCreate(Bundle)} 还没执行
-     * 但在 {@link #setData(Object)} 里却调用了 Presenter 的方法, 是会报空的, 因为 Dagger 注入是在 {@link Fragment#onCreate(Bundle)} 方法中执行的
-     * 然后才创建的 Presenter, 如果要做一些初始化操作,可以不必让外部调用 {@link #setData(Object)}, 在 {@link #initData(Bundle)} 中初始化就可以了
-     * <p>
-     * Example usage:
-     * <pre>
-     *fun setData(data:Any) {
-     *   if(data is Message){
-     *       when (data.what) {
-     *           0-> {
-     *               //根据what 做你想做的事情
-     *           }
-     *           else -> {
-     *           }
-     *       }
-     *   }
-     *}
-     *
-     *
-     *
-     *
-     *
-     * // call setData(Object):
-     * val data = Message();
-     * data.what = 0;
-     * data.arg1 = 1;
-     * fragment.setData(data);
-     * </pre>
-     *
-     * @param data 当不需要参数时 {@code data} 可以为 {@code null}
-     */
-    override fun setData(data: Any?) {
 
+    @OnClick(R.id.inventoryTv, R.id.clearTv, R.id.upLoadTv)
+    fun onViewClicked(view: View) {
+        when (view.id) {
+            //盘点
+            R.id.inventoryTv -> {
+                if (inventoryTv.text.toString() != "开始盘点") {
+                    changeInventory(true)
+                    /**
+                     * 执行结束盘点的操作
+                     */
+                    return
+                }
+                changeInventory(false)
+                /**
+                 * 执行开始盘点的操作
+                 */
+            }
+            //清除
+            R.id.clearTv -> {
+            }
+
+            //上传
+            R.id.upLoadTv -> {
+
+            }
+        }
     }
 
-    override fun showLoading() {
 
+    fun changeInventory(flag: Boolean) {
+        if (flag) {
+            inventoryTv.setText("开始盘点")
+            inventoryTv.background = _mActivity.resources.getDrawable(R.drawable.bg_inventory_start)
+        } else {
+            inventoryTv.setText("结束盘点")
+            inventoryTv.background = _mActivity.resources.getDrawable(R.drawable.bg_inventory_stop)
+        }
     }
 
-    override fun hideLoading() {
 
-    }
-
-    override fun showMessage(message: String) {
-        ArmsUtils.snackbarText(message)
-    }
-
-    override fun launchActivity(intent: Intent) {
-        ArmsUtils.startActivity(intent)
-    }
-
-    override fun killMyself() {
-
-    }
 }

@@ -8,7 +8,7 @@ import com.jess.arms.mvp.BaseModel
 import com.jess.arms.di.scope.FragmentScope
 import javax.inject.Inject
 
-import com.mwwl.mvp.contract.QueryContract
+import com.mwwl.mvp.contract.RecordContract
 
 
 /**
@@ -27,7 +27,7 @@ import com.mwwl.mvp.contract.QueryContract
 class QueryModel
 @Inject
 constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager),
-    QueryContract.Model {
+    RecordContract.Model {
     @Inject
     lateinit var mGson: Gson;
     @Inject
